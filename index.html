@@ -1,40 +1,366 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CycleSense AI - Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CycleSense AI - Legal & Privacy</title>
+  <meta name="description" content="CycleSense AI Privacy Policy, Terms of Service, Data Deletion, Data Security, Data Storage and Data Collection details." />
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2b;
+      --text: #f4f6ff;
+      --muted: #b8bfdc;
+      --primary: #8b7bff;
+      --border: #2a2f4a;
+      --ok: #1ec98f;
+      --warn: #ffcc66;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0e19 0%, #12162a 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 14, 25, 0.8);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .brand span { color: var(--primary); }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .menu a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+    }
+    .menu a:hover {
+      color: #fff;
+      border-color: var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+    .hero {
+      padding: 52px 0 26px;
+    }
+    .hero-card {
+      background: radial-gradient(circle at top right, rgba(139,123,255,0.25), transparent 55%), var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 4vw, 40px);
+      line-height: 1.2;
+    }
+    .sub {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+    .meta {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      border: 1px solid var(--border);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    main {
+      padding: 20px 0 70px;
+    }
+    section {
+      margin-top: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: #fff;
+    }
+    p, li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    ul { padding-left: 20px; margin: 8px 0; }
+    .note {
+      border-left: 4px solid var(--warn);
+      background: rgba(255, 204, 102, 0.08);
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 12px 0;
+      color: #ffe7b0;
+      font-size: 14px;
+    }
+    .ok {
+      border-left: 4px solid var(--ok);
+      background: rgba(30, 201, 143, 0.1);
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 12px 0;
+      color: #c5ffe9;
+      font-size: 14px;
+    }
+    .contact-box {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+    a.email {
+      color: #c8c1ff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-break: break-word;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0 40px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    code {
+      color: #e2deff;
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <h1>CycleSense AI - Privacy Policy</h1>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">CycleSense <span>AI</span></a>
+      <nav class="menu">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms</a>
+        <a href="#collection">Data Collection</a>
+        <a href="#storage">Data Storage</a>
+        <a href="#security">Data Security</a>
+        <a href="#deletion">Data Deletion</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <p>Your privacy is important to us.</p>
+  <div id="top" class="container hero">
+    <div class="hero-card">
+      <h1>Legal, Privacy & Data Information</h1>
+      <p class="sub">
+        This page explains how CycleSense AI collects, uses, stores, secures, and deletes user data.
+      </p>
+      <div class="meta">
+        <span class="pill">Effective Date: 15 April 2026</span>
+        <span class="pill">Applies to: CycleSense AI App</span>
+        <span class="pill">Contact: cyclesenseai@gmail.com</span>
+      </div>
+    </div>
+  </div>
 
-    <h2>Data Collection</h2>
-    <p>CycleSense AI collects user data such as email (for login), and health-related data (period tracking, symptoms) only when users choose to use specific features.</p>
+  <main class="container">
+    <section id="privacy">
+      <h2>Privacy Policy</h2>
+      <p>
+        At CycleSense AI, your privacy is important to us. We are committed to handling your personal and health-related
+        information responsibly and transparently. We only collect data necessary to provide app features, improve your
+        experience, and fulfill legal obligations.
+      </p>
 
-    <h2>Data Storage</h2>
-    <p>Data is primarily stored locally on the user's device. Optional features include:</p>
-    <ul>
-        <li>Google Drive backup (user-controlled)</li>
-        <li>Partner mode (secure encrypted storage)</li>
-    </ul>
+      <h3>What We Use Data For</h3>
+      <ul>
+        <li>To provide cycle tracking, predictions, reminders, and personalized insights.</li>
+        <li>To enable account features such as sign-in, sync, and subscription management.</li>
+        <li>To improve app performance, stability, and user experience.</li>
+        <li>To provide customer support and resolve issues.</li>
+      </ul>
 
-    <h2>Data Usage</h2>
-    <p>Data is used only to provide app functionality and is not sold to third parties.</p>
+      <h3>User Consent</h3>
+      <p>
+        By using CycleSense AI, you consent to this Privacy Policy and related legal terms.
+        If you do not agree, please stop using the app and request data deletion.
+      </p>
+    </section>
 
-    <h2>Data Security</h2>
-    <p>All data is encrypted in transit using secure protocols.</p>
+    <section id="terms">
+      <h2>Terms of Service</h2>
+      <h3>Service Nature</h3>
+      <p>
+        CycleSense AI provides wellness and informational tools only. It is not a medical diagnosis or emergency service.
+        Always consult a qualified doctor for medical advice.
+      </p>
 
-    <h2>Account & Data Deletion</h2>
-    <p>You can request deletion of your data by:</p>
-    <ul>
-        <li>Using the in-app delete option</li>
-        <li>Sending an email to cyclesenseai@gmail.com</li>
-    </ul>
+      <h3>Acceptable Use</h3>
+      <ul>
+        <li>You must provide accurate account information when required.</li>
+        <li>You must not misuse, reverse engineer, or attempt to disrupt the app.</li>
+        <li>You are responsible for protecting your account access.</li>
+      </ul>
 
-    <p>All data will be deleted within 7 days of request.</p>
+      <h3>Subscriptions & Billing</h3>
+      <ul>
+        <li>Premium plans may be available as monthly, quarterly, and yearly subscriptions.</li>
+        <li>Billing, renewals, refunds, and cancellations are governed by the payment platform (e.g., Play Store).</li>
+        <li>Feature availability may vary by plan and region.</li>
+      </ul>
 
-    <h2>Contact</h2>
-    <p>Email: cyclesenseai@gmail.com</p>
+      <h3>Limitation of Liability</h3>
+      <p>
+        To the maximum extent permitted by law, CycleSense AI is not liable for indirect, incidental, or consequential
+        damages resulting from the use or inability to use the app.
+      </p>
+    </section>
 
+    <section id="collection">
+      <h2>Data Collection</h2>
+      <h3>Data You Provide</h3>
+      <ul>
+        <li>Account details (e.g., email) when you sign in.</li>
+        <li>Health and cycle logs (e.g., period dates, symptoms, notes, mood, reminders).</li>
+        <li>Support communications you send to us.</li>
+      </ul>
+
+      <h3>Data Collected Automatically</h3>
+      <ul>
+        <li>Device and app diagnostics (e.g., crash logs, performance data).</li>
+        <li>Technical metadata necessary for security and reliability.</li>
+      </ul>
+
+      <div class="note">
+        Sensitive health data is handled with extra care and used only for app functionality and user-requested features.
+      </div>
+    </section>
+
+    <section id="storage">
+      <h2>Data Storage</h2>
+      <h3>Where Data Is Stored</h3>
+      <ul>
+        <li>Primary user data may be stored locally on your device for faster access and privacy.</li>
+        <li>If cloud backup/sync is enabled, selected encrypted data may be stored in connected cloud services.</li>
+      </ul>
+
+      <h3>Data Retention</h3>
+      <ul>
+        <li>We retain data as long as needed for service delivery, legal compliance, or user support.</li>
+        <li>You can request deletion of your account data at any time.</li>
+      </ul>
+
+      <h3>Third-Party Services</h3>
+      <p>
+        Some features may use trusted third-party providers (for example, authentication, payments, or analytics).
+        Their processing is governed by their own privacy terms.
+      </p>
+    </section>
+
+    <section id="security">
+      <h2>Data Security</h2>
+      <h3>Security Measures</h3>
+      <ul>
+        <li>Encryption in transit for network communication where applicable.</li>
+        <li>Access controls and secure authentication practices.</li>
+        <li>Periodic updates to improve security and reliability.</li>
+      </ul>
+
+      <h3>User Responsibilities</h3>
+      <ul>
+        <li>Keep your device protected with lock screen and OS updates.</li>
+        <li>Do not share account credentials.</li>
+        <li>Report suspicious activity immediately.</li>
+      </ul>
+
+      <div class="ok">
+        We continuously work to protect your data, but no method of transmission or storage is 100% risk-free.
+      </div>
+    </section>
+
+    <section id="deletion">
+      <h2>Data Deletion Policy</h2>
+      <h3>How to Request Deletion</h3>
+      <p>You can request deletion of your personal/account data by emailing us at:</p>
+      <p><a class="email" href="mailto:cyclesenseai@gmail.com">cyclesenseai@gmail.com</a></p>
+
+      <h3>What to Include in Request</h3>
+      <ul>
+        <li>Registered email address used in the app.</li>
+        <li>Subject line: <code>Data Deletion Request - CycleSense AI</code></li>
+        <li>Optional: reason/details for faster support.</li>
+      </ul>
+
+      <h3>Deletion Timeline</h3>
+      <ul>
+        <li>We aim to acknowledge requests within 3-7 business days.</li>
+        <li>Deletion is generally completed within 30 days, unless legal retention is required.</li>
+      </ul>
+
+      <h3>In-App Deletion</h3>
+      <p>
+        If the app includes an in-app “Delete Account/Data” option, you can use it directly. Some backup copies
+        may persist temporarily in secure systems until full cleanup cycles complete.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <p><strong>For privacy, legal, support, and deletion requests:</strong></p>
+        <p>Email: <a class="email" href="mailto:cyclesenseai@gmail.com">cyclesenseai@gmail.com</a></p>
+        <p>App Name: CycleSense AI</p>
+      </div>
+
+      <h3>Policy Updates</h3>
+      <p>
+        We may update this page from time to time. Changes become effective when posted here with a revised effective date.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 CycleSense AI. All rights reserved.
+  </footer>
 </body>
 </html>
