@@ -3,364 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CycleSense AI - Legal & Privacy</title>
-  <meta name="description" content="CycleSense AI Privacy Policy, Terms of Service, Data Deletion, Data Security, Data Storage and Data Collection details." />
+  <title>CycleSense AI - Smart Women's Health Tracker</title>
+  <meta name="description" content="CycleSense AI is a privacy-first period, fertility and wellness tracker with AI insights, secure logging, and multilingual support." />
   <style>
-    :root {
-      --bg: #0f1220;
-      --card: #171a2b;
-      --text: #f4f6ff;
-      --muted: #b8bfdc;
-      --primary: #8b7bff;
-      --border: #2a2f4a;
-      --ok: #1ec98f;
-      --warn: #ffcc66;
+    :root{
+      --bg:#0b1020;
+      --card:#121a31;
+      --muted:#a8b3d1;
+      --text:#eef2ff;
+      --primary:#7c5cff;
+      --secondary:#ff4fa3;
+      --accent:#31d0aa;
+      --border:#223055;
+      --glass:rgba(255,255,255,.05);
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: linear-gradient(180deg, #0b0e19 0%, #12162a 100%);
-      color: var(--text);
-      line-height: 1.65;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 700px at 80% -10%, rgba(124,92,255,.25), transparent 60%),
+        radial-gradient(900px 600px at -10% 20%, rgba(255,79,163,.2), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
     }
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
+    .container{width:min(1140px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:1000;
+      backdrop-filter:blur(12px);
+      background:rgba(8,12,25,.7);
+      border-bottom:1px solid var(--border);
     }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-      background: rgba(11, 14, 25, 0.8);
-      border-bottom: 1px solid var(--border);
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:14px}
+    .brand{font-weight:800;font-size:1.1rem;text-decoration:none;color:#fff}
+    .brand span{color:var(--primary)}
+    .nav-links{display:flex;flex-wrap:wrap;gap:8px}
+    .nav-links a{
+      color:var(--muted);text-decoration:none;font-size:.92rem;
+      padding:8px 12px;border:1px solid transparent;border-radius:10px
     }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
+    .nav-links a:hover{border-color:var(--border);color:#fff;background:var(--glass)}
+    .hero{padding:72px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+    .card{
+      background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 15px 45px rgba(0,0,0,.25);
     }
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(28px,5vw,50px);
+      line-height:1.15;
+      letter-spacing:-.03em
     }
-    .brand span { color: var(--primary); }
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .lead{color:var(--muted);font-size:1.05rem;margin:0 0 22px}
+    .btns{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{
+      text-decoration:none;color:#fff;padding:12px 16px;border-radius:12px;
+      font-weight:600;border:1px solid var(--border);display:inline-block
     }
-    .menu a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-      padding: 8px 10px;
-      border: 1px solid transparent;
-      border-radius: 10px;
+    .btn.primary{background:linear-gradient(135deg,var(--primary),#5a7dff);border:none}
+    .btn.ghost{background:transparent}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{background:var(--glass);border:1px solid var(--border);border-radius:12px;padding:14px}
+    .stat b{font-size:1.3rem}
+    section{padding:10px 0 28px}
+    .section-title{
+      font-size:1.7rem;margin:0 0 8px;letter-spacing:-.02em
     }
-    .menu a:hover {
-      color: #fff;
-      border-color: var(--border);
-      background: rgba(255,255,255,0.04);
+    .section-sub{color:var(--muted);margin:0 0 18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .feature{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px
     }
-    .hero {
-      padding: 52px 0 26px;
+    .feature h3{margin:0 0 8px;font-size:1.04rem}
+    .feature p{margin:0;color:var(--muted);font-size:.95rem}
+    .chip{
+      display:inline-block;font-size:.75rem;padding:5px 10px;border-radius:999px;
+      border:1px solid var(--border);color:#dfe4ff;background:var(--glass);margin-bottom:10px
     }
-    .hero-card {
-      background: radial-gradient(circle at top right, rgba(139,123,255,0.25), transparent 55%), var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
+    .timeline{display:grid;gap:10px}
+    .timeline .row{
+      border:1px solid var(--border);border-radius:12px;padding:12px;background:var(--card)
     }
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(24px, 4vw, 40px);
-      line-height: 1.2;
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .plan{
+      background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;position:relative
     }
-    .sub {
-      color: var(--muted);
-      margin: 0;
-      font-size: 15px;
+    .plan.popular{border-color:#6d8cff;box-shadow:0 0 0 1px #6d8cff inset}
+    .badge{
+      position:absolute;top:12px;right:12px;background:linear-gradient(120deg,var(--secondary),#ff7bc0);
+      color:#fff;font-size:.72rem;border-radius:999px;padding:5px 10px;font-weight:700
     }
-    .meta {
-      margin-top: 14px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .price{font-size:2rem;font-weight:800;margin:6px 0}
+    .muted{color:var(--muted)}
+    .cta{
+      margin-top:12px;display:inline-block;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),#5a7dff);
+      padding:10px 14px;border-radius:10px;font-weight:600
     }
-    .pill {
-      border: 1px solid var(--border);
-      color: var(--muted);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 12px;
+    footer{
+      margin-top:24px;
+      border-top:1px solid var(--border);
+      background:rgba(12,18,36,.7)
     }
-    main {
-      padding: 20px 0 70px;
+    .footer-grid{
+      display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:28px 0
     }
-    section {
-      margin-top: 18px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
+    .footer-grid h4{margin:0 0 8px}
+    .footer-grid p,.footer-grid a{color:var(--muted);font-size:.94rem}
+    .footer-grid a{text-decoration:none}
+    .footer-grid a:hover{color:#fff}
+    .copy{
+      border-top:1px solid var(--border);
+      padding:12px 0 20px;color:#8f9abb;font-size:.86rem
     }
-    h2 {
-      margin: 0 0 12px;
-      font-size: 22px;
-    }
-    h3 {
-      margin: 18px 0 8px;
-      font-size: 17px;
-      color: #fff;
-    }
-    p, li {
-      color: var(--muted);
-      font-size: 15px;
-    }
-    ul { padding-left: 20px; margin: 8px 0; }
-    .note {
-      border-left: 4px solid var(--warn);
-      background: rgba(255, 204, 102, 0.08);
-      padding: 10px 12px;
-      border-radius: 10px;
-      margin: 12px 0;
-      color: #ffe7b0;
-      font-size: 14px;
-    }
-    .ok {
-      border-left: 4px solid var(--ok);
-      background: rgba(30, 201, 143, 0.1);
-      padding: 10px 12px;
-      border-radius: 10px;
-      margin: 12px 0;
-      color: #c5ffe9;
-      font-size: 14px;
-    }
-    .contact-box {
-      display: grid;
-      gap: 10px;
-      padding: 14px;
-      border: 1px dashed var(--border);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.02);
-    }
-    a.email {
-      color: #c8c1ff;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      word-break: break-word;
-    }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 20px 0 40px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
-    code {
-      color: #e2deff;
-      background: rgba(255,255,255,0.06);
-      padding: 2px 6px;
-      border-radius: 6px;
+    @media (max-width:900px){
+      .hero-grid,.grid-3,.pricing,.footer-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="#top">CycleSense <span>AI</span></a>
-      <nav class="menu">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms</a>
-        <a href="#collection">Data Collection</a>
-        <a href="#storage">Data Storage</a>
-        <a href="#security">Data Security</a>
-        <a href="#deletion">Data Deletion</a>
+      <a class="brand" href="#">CycleSense <span>AI</span></a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#plans">Plans</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div id="top" class="container hero">
-    <div class="hero-card">
-      <h1>Legal, Privacy & Data Information</h1>
-      <p class="sub">
-        This page explains how CycleSense AI collects, uses, stores, secures, and deletes user data.
-      </p>
-      <div class="meta">
-        <span class="pill">Effective Date: 15 April 2026</span>
-        <span class="pill">Applies to: CycleSense AI App</span>
-        <span class="pill">Contact: cyclesenseai@gmail.com</span>
-      </div>
-    </div>
-  </div>
-
   <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card">
+          <h1>Smarter Cycle Tracking, <br />Built for Privacy</h1>
+          <p class="lead">
+            CycleSense AI ek modern women's health app hai jisme period tracking, cycle prediction,
+            fertility insights, reminders, multilingual support, aur privacy-first design milta hai.
+          </p>
+          <div class="btns">
+            <a class="btn primary" href="#features">Explore Features</a>
+            <a class="btn ghost" href="https://ansarapps.github.io/cyclesense-ai-pages/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+            <a class="btn ghost" href="https://ansarapps.github.io/cyclesense-ai-pages/terms.html" target="_blank" rel="noopener">Terms of Service</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="stats">
+            <div class="stat"><b>AI Insights</b><div class="muted">Pattern-based cycle analysis</div></div>
+            <div class="stat"><b>Secure Logs</b><div class="muted">Health entries with privacy focus</div></div>
+            <div class="stat"><b>Partner Mode</b><div class="muted">Optional shared tracking</div></div>
+            <div class="stat"><b>Cloud Sync</b><div class="muted">Backup options when enabled</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2 class="section-title">Core Features</h2>
+      <p class="section-sub">CycleSense AI daily tracking ko easy aur intelligent banata hai.</p>
+      <div class="grid-3">
+        <article class="feature">
+          <span class="chip">Cycle Tracking</span>
+          <h3>Period & Cycle Logs</h3>
+          <p>Start/end dates, symptoms, mood, energy aur notes ko ek jagah track karein.</p>
+        </article>
+        <article class="feature">
+          <span class="chip">Prediction</span>
+          <h3>Next Period & Fertile Window</h3>
+          <p>Estimated period dates, ovulation aur fertile days ke smart indicators.</p>
+        </article>
+        <article class="feature">
+          <span class="chip">AI</span>
+          <h3>Personalized Insights</h3>
+          <p>Logged data ke basis par tailored suggestions aur pattern awareness.</p>
+        </article>
+        <article class="feature">
+          <span class="chip">Reminders</span>
+          <h3>Daily Notifications</h3>
+          <p>Cycle logging, wellness check-ins aur custom reminder schedule support.</p>
+        </article>
+        <article class="feature">
+          <span class="chip">Modes</span>
+          <h3>Period, Fertility, Pregnancy</h3>
+          <p>Different life stages ke liye mode-based experience aur dedicated tools.</p>
+        </article>
+        <article class="feature">
+          <span class="chip">Reports</span>
+          <h3>Shareable Data Summary</h3>
+          <p>History aur trends dekhkar better health conversations ke liye preparation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2 class="section-title">How CycleSense AI Works</h2>
+      <p class="section-sub">Simple flow, better consistency.</p>
+      <div class="timeline">
+        <div class="row"><strong>1. Log</strong> - Period start date aur daily symptoms record karein.</div>
+        <div class="row"><strong>2. Analyze</strong> - App cycle pattern aur trends calculate karta hai.</div>
+        <div class="row"><strong>3. Predict</strong> - Next period window, fertile days aur reminders show hote hain.</div>
+        <div class="row"><strong>4. Improve</strong> - AI insights ke saath better routine aur awareness build hoti hai.</div>
+      </div>
+    </section>
+
     <section id="privacy">
-      <h2>Privacy Policy</h2>
-      <p>
-        At CycleSense AI, your privacy is important to us. We are committed to handling your personal and health-related
-        information responsibly and transparently. We only collect data necessary to provide app features, improve your
-        experience, and fulfill legal obligations.
+      <h2 class="section-title">Privacy & Safety First</h2>
+      <p class="section-sub">
+        Aapka data sensitive hai, isliye privacy-by-design approach follow kiya jata hai.
       </p>
-
-      <h3>What We Use Data For</h3>
-      <ul>
-        <li>To provide cycle tracking, predictions, reminders, and personalized insights.</li>
-        <li>To enable account features such as sign-in, sync, and subscription management.</li>
-        <li>To improve app performance, stability, and user experience.</li>
-        <li>To provide customer support and resolve issues.</li>
-      </ul>
-
-      <h3>User Consent</h3>
-      <p>
-        By using CycleSense AI, you consent to this Privacy Policy and related legal terms.
-        If you do not agree, please stop using the app and request data deletion.
-      </p>
-    </section>
-
-    <section id="terms">
-      <h2>Terms of Service</h2>
-      <h3>Service Nature</h3>
-      <p>
-        CycleSense AI provides wellness and informational tools only. It is not a medical diagnosis or emergency service.
-        Always consult a qualified doctor for medical advice.
-      </p>
-
-      <h3>Acceptable Use</h3>
-      <ul>
-        <li>You must provide accurate account information when required.</li>
-        <li>You must not misuse, reverse engineer, or attempt to disrupt the app.</li>
-        <li>You are responsible for protecting your account access.</li>
-      </ul>
-
-      <h3>Subscriptions & Billing</h3>
-      <ul>
-        <li>Premium plans may be available as monthly, quarterly, and yearly subscriptions.</li>
-        <li>Billing, renewals, refunds, and cancellations are governed by the payment platform (e.g., Play Store).</li>
-        <li>Feature availability may vary by plan and region.</li>
-      </ul>
-
-      <h3>Limitation of Liability</h3>
-      <p>
-        To the maximum extent permitted by law, CycleSense AI is not liable for indirect, incidental, or consequential
-        damages resulting from the use or inability to use the app.
-      </p>
-    </section>
-
-    <section id="collection">
-      <h2>Data Collection</h2>
-      <h3>Data You Provide</h3>
-      <ul>
-        <li>Account details (e.g., email) when you sign in.</li>
-        <li>Health and cycle logs (e.g., period dates, symptoms, notes, mood, reminders).</li>
-        <li>Support communications you send to us.</li>
-      </ul>
-
-      <h3>Data Collected Automatically</h3>
-      <ul>
-        <li>Device and app diagnostics (e.g., crash logs, performance data).</li>
-        <li>Technical metadata necessary for security and reliability.</li>
-      </ul>
-
-      <div class="note">
-        Sensitive health data is handled with extra care and used only for app functionality and user-requested features.
+      <div class="grid-3">
+        <article class="feature">
+          <h3>Data Collection Transparency</h3>
+          <p>Sirf required account aur app-functionality data collect kiya jata hai.</p>
+        </article>
+        <article class="feature">
+          <h3>Data Storage Clarity</h3>
+          <p>Local-first handling aur optional sync scenarios clear policy me defined hain.</p>
+        </article>
+        <article class="feature">
+          <h3>Deletion Support</h3>
+          <p>Data deletion request ke liye direct support email available hai.</p>
+        </article>
       </div>
-    </section>
-
-    <section id="storage">
-      <h2>Data Storage</h2>
-      <h3>Where Data Is Stored</h3>
-      <ul>
-        <li>Primary user data may be stored locally on your device for faster access and privacy.</li>
-        <li>If cloud backup/sync is enabled, selected encrypted data may be stored in connected cloud services.</li>
-      </ul>
-
-      <h3>Data Retention</h3>
-      <ul>
-        <li>We retain data as long as needed for service delivery, legal compliance, or user support.</li>
-        <li>You can request deletion of your account data at any time.</li>
-      </ul>
-
-      <h3>Third-Party Services</h3>
-      <p>
-        Some features may use trusted third-party providers (for example, authentication, payments, or analytics).
-        Their processing is governed by their own privacy terms.
+      <p class="section-sub" style="margin-top:12px">
+        Full details yahan dekhein:
+        <a href="https://ansarapps.github.io/cyclesense-ai-pages/privacy.html" target="_blank" rel="noopener" style="color:#c8d2ff">Privacy Policy</a>
       </p>
     </section>
 
-    <section id="security">
-      <h2>Data Security</h2>
-      <h3>Security Measures</h3>
-      <ul>
-        <li>Encryption in transit for network communication where applicable.</li>
-        <li>Access controls and secure authentication practices.</li>
-        <li>Periodic updates to improve security and reliability.</li>
-      </ul>
-
-      <h3>User Responsibilities</h3>
-      <ul>
-        <li>Keep your device protected with lock screen and OS updates.</li>
-        <li>Do not share account credentials.</li>
-        <li>Report suspicious activity immediately.</li>
-      </ul>
-
-      <div class="ok">
-        We continuously work to protect your data, but no method of transmission or storage is 100% risk-free.
+    <section id="plans">
+      <h2 class="section-title">Premium Plans</h2>
+      <p class="section-sub">Current pricing options:</p>
+      <div class="pricing">
+        <article class="plan">
+          <h3>Monthly</h3>
+          <div class="price">₹199</div>
+          <p class="muted">Flexible monthly access</p>
+        </article>
+        <article class="plan">
+          <h3>Quarterly</h3>
+          <div class="price">₹499</div>
+          <p class="muted">Value pack for 3 months</p>
+        </article>
+        <article class="plan popular">
+          <span class="badge">Best Value</span>
+          <h3>Yearly</h3>
+          <div class="price">₹1199</div>
+          <p class="muted">Maximum savings for long-term use</p>
+        </article>
       </div>
-    </section>
-
-    <section id="deletion">
-      <h2>Data Deletion Policy</h2>
-      <h3>How to Request Deletion</h3>
-      <p>You can request deletion of your personal/account data by emailing us at:</p>
-      <p><a class="email" href="mailto:cyclesenseai@gmail.com">cyclesenseai@gmail.com</a></p>
-
-      <h3>What to Include in Request</h3>
-      <ul>
-        <li>Registered email address used in the app.</li>
-        <li>Subject line: <code>Data Deletion Request - CycleSense AI</code></li>
-        <li>Optional: reason/details for faster support.</li>
-      </ul>
-
-      <h3>Deletion Timeline</h3>
-      <ul>
-        <li>We aim to acknowledge requests within 3-7 business days.</li>
-        <li>Deletion is generally completed within 30 days, unless legal retention is required.</li>
-      </ul>
-
-      <h3>In-App Deletion</h3>
-      <p>
-        If the app includes an in-app “Delete Account/Data” option, you can use it directly. Some backup copies
-        may persist temporarily in secure systems until full cleanup cycles complete.
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-box">
-        <p><strong>For privacy, legal, support, and deletion requests:</strong></p>
-        <p>Email: <a class="email" href="mailto:cyclesenseai@gmail.com">cyclesenseai@gmail.com</a></p>
-        <p>App Name: CycleSense AI</p>
-      </div>
-
-      <h3>Policy Updates</h3>
-      <p>
-        We may update this page from time to time. Changes become effective when posted here with a revised effective date.
-      </p>
     </section>
   </main>
 
-  <footer>
-    © 2026 CycleSense AI. All rights reserved.
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h4>CycleSense AI</h4>
+        <p>
+          Smart, secure and modern women's health companion for cycle awareness,
+          prediction and daily wellness tracking.
+        </p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p><a href="https://ansarapps.github.io/cyclesense-ai-pages/privacy.html" target="_blank" rel="noopener">Privacy Policy</a></p>
+        <p><a href="https://ansarapps.github.io/cyclesense-ai-pages/terms.html" target="_blank" rel="noopener">Terms of Service</a></p>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <p><a href="mailto:cyclesenseai@gmail.com">cyclesenseai@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="container copy">
+      © 2026 CycleSense AI. All rights reserved.
+    </div>
   </footer>
 </body>
 </html>
